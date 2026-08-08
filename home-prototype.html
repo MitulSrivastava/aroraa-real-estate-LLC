@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARORA REAL ESTATE | Luxury Dubai &amp; Dubai & UAE properties</title>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Custom CSS -->
+<link href="styles-new.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "inverse-surface": "#d9e2fd",
+                "surface-container": "#161f33",
+                "on-secondary-container": "#d8b36c",
+                "primary-fixed": "#d9e2ff",
+                "on-error-container": "#ffdad6",
+                "on-secondary-fixed": "#261900",
+                "primary": "#b7c6ef",
+                "outline-variant": "#45464e",
+                "on-tertiary": "#1c3054",
+                "surface": "#091326",
+                "sand-haze": "#F3F4F6",
+                "surface-container-high": "#202a3e",
+                "outline": "#8f9099",
+                "on-secondary-fixed-variant": "#5c4203",
+                "primary-container": "#0b1c3c",
+                "on-error": "#690005",
+                "surface-dim": "#091326",
+                "surface-container-lowest": "#040e21",
+                "background": "#091326",
+                "on-tertiary-container": "#7285ae",
+                "primary-fixed-dim": "#b7c6ef",
+                "on-primary-container": "#7685aa",
+                "on-primary-fixed-variant": "#374668",
+                "on-surface": "#d9e2fd",
+                "surface-container-highest": "#2b3549",
+                "error": "#ffb4ab",
+                "inverse-primary": "#4f5e81",
+                "tertiary-fixed": "#d8e2ff",
+                "tertiary-container": "#051c40",
+                "on-surface-variant": "#c5c6cf",
+                "secondary": "#e8c178",
+                "platinum-gray": "#E5E7EB",
+                "error-container": "#93000a",
+                "midnight-navy": "#0B1C3C",
+                "tertiary-fixed-dim": "#b4c6f3",
+                "surface-bright": "#30394e",
+                "secondary-fixed": "#ffdea3",
+                "on-primary-fixed": "#091a3a",
+                "inverse-on-surface": "#273045",
+                "on-tertiary-fixed-variant": "#34466c",
+                "on-tertiary-fixed": "#041a3e",
+                "on-secondary": "#412d00",
+                "secondary-fixed-dim": "#e8c178",
+                "surface-tint": "#b7c6ef",
+                "on-primary": "#203051",
+                "surface-variant": "#2b3549",
+                "secondary-container": "#5f4505",
+                "on-background": "#d9e2fd",
+                "estate-gold": "#C9A55F",
+                "surface-container-low": "#121b2f",
+                "tertiary": "#b4c6f3"
+              },
+              "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "1.5rem",
+                "xl": "2rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "unit": "8px",
+                "margin-mobile": "20px",
+                "container-max": "1440px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "section-gap": "160px"
+              },
+              "fontFamily": {
+                "display-lg": ["Bodoni Moda", "serif"],
+                "label-sm": ["Manrope", "sans-serif"],
+                "headline-md": ["Bodoni Moda", "serif"],
+                "headline-lg": ["Bodoni Moda", "serif"],
+                "display-lg-mobile": ["Bodoni Moda", "serif"],
+                "body-lg": ["Manrope", "sans-serif"],
+                "label-lg": ["Manrope", "sans-serif"],
+                "headline-lg-mobile": ["Bodoni Moda", "serif"],
+                "body-md": ["Manrope", "sans-serif"]
+              },
+              "fontSize": {
+                "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}]
+              },
+              "animation": {
+                "infinite-scroll": "infinite-scroll 40s linear infinite",
+                "fade-slide-up": "fadeSlideUp 1s ease-out forwards",
+              },
+              "keyframes": {
+                "infinite-scroll": {
+                  "from": { transform: "translateX(0)" },
+                  "to": { transform: "translateX(-100%)" },
+                },
+                "fadeSlideUp": {
+                  "0%": { opacity: "0", transform: "translateY(20px)" },
+                  "100%": { opacity: "1", transform: "translateY(0)" },
+                }
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(11, 28, 60, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(201, 165, 95, 0.15);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(11, 28, 60, 0.1), rgba(9, 19, 38, 1));
+        }
+        .fade-edge {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .animate-delay-1 { animation-delay: 0.2s; }
+        .animate-delay-2 { animation-delay: 0.4s; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+    </style>
+<!-- AOS Scroll Animations -->
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-estate-gold selection:text-midnight-navy">
+<!-- Skip Links for Accessibility -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#navbarNav">Skip to navigation</a>
+<!-- Navigation -->
+<nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-lg navbar-modern" role="navigation">
+<div class="container">
+<a aria-label="Aroraa Real Estate LLC Home" class="navbar-brand brand-logo d-flex align-items-center text-decoration-none" href="index">
+<img alt="Aroraa Real Estate LLC Logo" class="img-fluid me-3" loading="eager" src="aroraa-logo.webp" style="height: 60px; width: auto"/>
+<div class="d-flex flex-column justify-content-center pt-1">
+<span class="brand-urban" style="color: #0b1c3c !important; font-size: 2.2rem; font-family: 'Times New Roman', Times, serif; letter-spacing: 2px; font-weight: 700; line-height: 1;">ARORAA</span>
+<span class="brand-investors" style="color: #6b7280 !important; font-size: 0.95rem; font-weight: 600; letter-spacing: 0px; font-family: 'Times New Roman', Times, serif; line-height: 1; margin-top: 4px;">Real Estate LLC </span>
+</div>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0 custom-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="hamburger-line"></span>
+<span class="hamburger-line"></span>
+<span class="hamburger-line"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto align-items-center me-2">
+<li class="nav-item">
+<a class="nav-link" href="index">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="about">About</a>
+</li>
+<li class="nav-item">
+            <a class="nav-link" href="uae-projects">Projects</a>
+          </li>
+<li class="nav-item">
+<a class="nav-link" href="careers">Careers</a>
+</li>
+<li class="nav-item d-lg-none mt-3 mb-2">
+<a class="nav-link fw-bold" href="contact" style="color: #c9a55f !important; border: 1px solid #c9a55f; border-radius: 50px; padding: 10px 30px !important; display: inline-block;">CONTACT US</a>
+</li>
+</ul>
+<div class="ms-lg-2 d-none d-lg-block">
+<a class="btn btn-cta rounded-pill px-4" href="contact">
+              Contact
+            </a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+<!-- Floating WhatsApp Button -->
+<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/971506884518" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<!-- Mobile Sticky CTA Bar -->
+<div class="mobile-cta-bar">
+<a class="btn btn-primary" href="tel:+971-506 884518">
+<i class="fas fa-phone me-1"></i> Call Now
+      </a>
+<a class="btn btn-cta" href="https://wa.me/971506884518" target="_blank">
+<i class="fab fa-whatsapp me-1"></i> WhatsApp
+      </a>
+</div>
+<!-- Hero Section -->
+<section class="hero-section position-relative overflow-hidden" id="home" style="min-height: 88vh !important; display: flex; align-items: center;">
+<!-- Background Slides -->
+<div id="hero-slider-container">
+<div class="hero-bg-slide active" style="background-image: url('images/sobharivana/imgi_3_banner1.webp');"></div>
+<div class="hero-bg-slide" style="background-image: url('images/forbesfabluxe/imgi_19_Banner.webp');"></div>
+<div class="hero-bg-slide" style="background-image: url('images/acestarlit/imgi_25_gallery-1.webp');"></div>
+</div>
+<div class="hero-overlay" style="background: linear-gradient(135deg, rgba(11,28,60,0.7) 0%, rgba(11,28,60,0.4) 100%); z-index: 2;"></div>
+<div class="container position-relative z-3">
+<div class="row align-items-center justify-content-center" style="min-height: 60vh; padding-bottom: 8vh;">
+<div class="col-lg-10 mx-auto text-center">
+<div class="hero-content">
+<!-- Live Badge -->
+<div class="hero-badge animate-on-scroll" data-animation="fadeInUp" data-delay="0.1s">
+<span class="badge-dot"></span>
+                Dubai & UAE-certified Real Estate Advisors  |  10+ Years Experience
+              </div>
+<!-- Typewriter Headline -->
+<h1 class="fw-bold text-white mb-4" style="font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.15;letter-spacing:-0.02em;text-shadow:0 4px 20px rgba(0,0,0,0.4);">
+<span class="typewriter-text" id="hero-typewriter"></span><span class="typewriter-cursor"></span>
+</h1>
+<p class="lead mb-5 hero-subtitle mx-auto fw-light" style="color: rgba(255,255,255,0.88); max-width: 680px; text-shadow: 0 2px 10px rgba(0,0,0,0.4); font-size:1.15rem;">
+                We bring <span class="fw-semibold" style="color: #c9a55f;">global market experience</span> from Dubai to help you invest, buy, and grow in Dubai.
+              </p>
+<div class="hero-buttons d-flex gap-3 justify-content-center flex-wrap mt-2">
+<a class="btn btn-cta btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center border-0 fw-bold" href="properties">
+<i class="fas fa-building me-2"></i> EXPLORE PROJECTS
+                </a>
+<a class="btn btn-primary btn-lg px-5 py-3 rounded-pill d-flex align-items-center fw-semibold" href="contact">
+                  Book Free Consultation <i class="fas fa-arrow-right ms-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Builder Logo Ticker Section -->
+<section class="py-12 bg-surface-container-lowest border-y border-estate-gold/10 relative overflow-hidden fade-in-section">
+<div class="max-w-container-max mx-auto px-margin-desktop mb-10">
+<h2 class="text-center text-platinum-gray/40 font-label-lg text-label-lg tracking-[0.3em] uppercase">Our Trusted Development Partners</h2>
+</div>
+<div class="flex overflow-hidden group">
+<div class="flex animate-infinite-scroll whitespace-nowrap items-center gap-32 pr-32">
+<!-- First Set -->
+<div class="flex items-center gap-32">
+<img alt="Builder Logos" class="h-24 object-contain opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida/AP1WRLsaqenVjcjKBQy5v54TbpBx6IT5j-ehzSgYmFQc1rPuFYKKHzPe9F98AVdrTD536QONtuJQ00FPYRGDKJTy9AondzgMT39QMOVdwSqhXivH2DUCCiMykGlp_ivxtP-AlxSOc1fm6GaJoetqtFZ_xLo5Hgk2sPwkekMVYhD6TdUo_5hIeykXJbz4vrBOS3pxaOb1BUS-uWsIWmXGqc3ARJbS8onAhcz_x8BMpNkcHKJZ5bNzQ4VU9e-gIEc"/>
+</div>
+<!-- Second Set for seamless loop -->
+<div class="flex items-center gap-32">
+<img alt="Builder Logos" class="h-24 object-contain opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida/AP1WRLsaqenVjcjKBQy5v54TbpBx6IT5j-ehzSgYmFQc1rPuFYKKHzPe9F98AVdrTD536QONtuJQ00FPYRGDKJTy9AondzgMT39QMOVdwSqhXivH2DUCCiMykGlp_ivxtP-AlxSOc1fm6GaJoetqtFZ_xLo5Hgk2sPwkekMVYhD6TdUo_5hIeykXJbz4vrBOS3pxaOb1BUS-uWsIWmXGqc3ARJbS8onAhcz_x8BMpNkcHKJZ5bNzQ4VU9e-gIEc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Showcase Section -->
+<section class="py-section-gap bg-surface relative overflow-hidden fade-in-section">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Dubai & UAE Exclusive -->
+<div class="flex flex-col gap-8 group">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-estate-gold mb-4 italic">Dubai & UAE Exclusive</h2>
+<p class="font-body-lg text-body-lg text-platinum-gray/60 mb-6">Curated high-end investment opportunities in the world's most dynamic property market.</p>
+<div class="flex flex-wrap gap-4 mb-8">
+<span class="glass-card px-4 py-2 rounded-full text-label-sm tracking-widest text-platinum-gray uppercase flex items-center gap-2"><span class="material-symbols-outlined text-estate-gold text-sm">trending_up</span> High Yields</span>
+<span class="glass-card px-4 py-2 rounded-full text-label-sm tracking-widest text-platinum-gray uppercase flex items-center gap-2"><span class="material-symbols-outlined text-estate-gold text-sm">account_balance</span> Tax-Free Gains</span>
+</div>
+</div>
+<div class="relative overflow-hidden aspect-[4/5] rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-estate-gold/10">
+<img alt="Dubai & UAE Exclusive" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLvp2Jglib2UO8aPqBMmp892F-VTKiaibLoeGLWCIJZbXuNJED4eY8Xscfs402BCsb3Wnp1Uc2m6xXM9WfQTZE7ue1I-znXcEGAxvvLXR3FcQ0Oq4IimZHlTlrFl-wGvNULCW2mWaeiTovPyYEinUm8uQC0wlIA3-szc4fOUhHWyU-3SYQahq09dIaVceGn5lhxRZvbOvThF6xnWLBFBvT0FqioSEyvm_5KtdGqMZPa1x9FRMS_nyaR08NE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight-navy via-midnight-navy/20 to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="text-estate-gold font-label-sm text-label-sm tracking-widest block mb-2 uppercase">Signature Collection</span>
+<h3 class="font-headline-md text-headline-md text-platinum-gray mb-4">Ultra-Luxury Penthouses</h3>
+<button class="flex items-center gap-2 text-platinum-gray font-label-lg group-hover:text-estate-gold transition-colors">
+                                Explore Properties <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Dubai Select -->
+<div class="flex flex-col gap-8 group mt-16 lg:mt-0">
+<div class="text-center md:text-left lg:text-right">
+<h2 class="font-headline-lg text-headline-lg text-platinum-gray mb-4">Dubai <span class="text-estate-gold italic">Select</span></h2>
+<p class="font-body-lg text-body-lg text-platinum-gray/60 mb-6 lg:ml-auto">Elevating the NCR skyline with premium developments offering unparalleled growth potential.</p>
+<div class="flex flex-wrap gap-4 mb-8 justify-center lg:justify-end">
+<span class="glass-card px-4 py-2 rounded-full text-label-sm tracking-widest text-platinum-gray uppercase flex items-center gap-2"><span class="material-symbols-outlined text-estate-gold text-sm">show_chart</span> Growth Corridor</span>
+<span class="glass-card px-4 py-2 rounded-full text-label-sm tracking-widest text-platinum-gray uppercase flex items-center gap-2"><span class="material-symbols-outlined text-estate-gold text-sm">weekend</span> Premium Living</span>
+</div>
+</div>
+<div class="relative overflow-hidden aspect-[4/5] rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-estate-gold/10">
+<img alt="Dubai Select" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLv6xg5cWu2gd56qlC0sbI8RkOw3vPKML6y-o9EYqOz-KskfncCXO7Z_zEcaiUl4m86I4A4vFmyPOWRKTx8eCCVNTqQB1xUvak2vLdK79TlDO8nEadjCbAsvLnKWCBNP1eB54q_PzDcNV1-n37JZn0Cspr6363cPPe5eafqlIWPNAw0dDgn5UvfhNDPTLqktdfnFAoqJMugaebDgTi-m_kzBR7iz09x5dIQ-bElMIvbuzllwCjcuqN2p2lQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-midnight-navy via-midnight-navy/20 to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="text-estate-gold font-label-sm text-label-sm tracking-widest block mb-2 uppercase">Featured Project</span>
+<h3 class="font-headline-md text-headline-md text-platinum-gray mb-4">Sobha Rivana</h3>
+<button class="flex items-center gap-2 text-platinum-gray font-label-lg group-hover:text-estate-gold transition-colors">
+                                View Details <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Arora Advantage -->
+<section class="py-section-gap bg-surface-container-lowest border-y border-estate-gold/10 fade-in-section">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<span class="text-estate-gold font-label-lg text-label-lg tracking-widest uppercase mb-4 block">Unrivaled Expertise</span>
+<h2 class="font-display-lg text-headline-lg text-platinum-gray italic">The Aroraa Advantage</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-12 rounded-2xl hover:border-estate-gold/40 transition-all duration-500 group hover:translate-y-[-8px]">
+<div class="w-16 h-16 bg-midnight-navy rounded-full flex items-center justify-center border border-estate-gold/20 mb-8 group-hover:bg-estate-gold transition-colors duration-500">
+<span class="material-symbols-outlined text-estate-gold text-3xl group-hover:text-midnight-navy transition-colors duration-500">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-platinum-gray mb-4">Dubai Experience</h3>
+<p class="text-platinum-gray/60 leading-relaxed font-body-md">Bringing global real estate expertise and premium standards from the world's most dynamic property market straight to Dubai.</p>
+</div>
+<div class="glass-card p-12 rounded-2xl hover:border-estate-gold/40 transition-all duration-500 group hover:translate-y-[-8px]">
+<div class="w-16 h-16 bg-midnight-navy rounded-full flex items-center justify-center border border-estate-gold/20 mb-8 group-hover:bg-estate-gold transition-colors duration-500">
+<span class="material-symbols-outlined text-estate-gold text-3xl group-hover:text-midnight-navy transition-colors duration-500">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-platinum-gray mb-4">Transparent Deals</h3>
+<p class="text-platinum-gray/60 leading-relaxed font-body-md">Complete honesty with zero hidden charges. We show you all costs upfront and recommend properties that fit your goals perfectly.</p>
+</div>
+<div class="glass-card p-12 rounded-2xl hover:border-estate-gold/40 transition-all duration-500 group hover:translate-y-[-8px]">
+<div class="w-16 h-16 bg-midnight-navy rounded-full flex items-center justify-center border border-estate-gold/20 mb-8 group-hover:bg-estate-gold transition-colors duration-500">
+<span class="material-symbols-outlined text-estate-gold text-3xl group-hover:text-midnight-navy transition-colors duration-500">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-platinum-gray mb-4">Exclusive Access</h3>
+<p class="text-platinum-gray/60 leading-relaxed font-body-md">Gain early pre-launch pricing, private off-market deals, and priority inventory on Dubai's most premium luxury projects.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap bg-surface overflow-hidden fade-in-section">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<span class="material-symbols-outlined text-estate-gold text-5xl mb-6 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="font-headline-lg text-headline-lg text-platinum-gray">Trusted by Discerning Investors</h2>
+</div>
+<div class="flex overflow-x-auto gap-gutter pb-8 snap-x snap-mandatory fade-edge no-scrollbar">
+<div class="min-w-[350px] md:min-w-[450px] snap-center glass-card p-10 rounded-2xl hover:border-estate-gold/30 transition-colors">
+<div class="flex text-estate-gold mb-6 gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-platinum-gray/80 font-body-lg italic mb-8 leading-relaxed">"Great experience dealing with Aroraa Real Estate LLC. Their transparency and professionalism made the transaction smooth and stress-free."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-midnight-navy border border-estate-gold/30 rounded-full flex items-center justify-center text-estate-gold font-headline-md">N</div>
+<div>
+<div class="font-bold text-platinum-gray font-label-lg">Navin Kumar</div>
+<div class="text-label-sm text-platinum-gray/50 uppercase tracking-wider">Verified Client</div>
+</div>
+</div>
+</div>
+<div class="min-w-[350px] md:min-w-[450px] snap-center glass-card p-10 rounded-2xl hover:border-estate-gold/30 transition-colors">
+<div class="flex text-estate-gold mb-6 gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-platinum-gray/80 font-body-lg italic mb-8 leading-relaxed">"Their knowledge of Dubai's micro-markets and upcoming developments is outstanding. Highly recommended for long-term investments."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-midnight-navy border border-estate-gold/30 rounded-full flex items-center justify-center text-estate-gold font-headline-md">R</div>
+<div>
+<div class="font-bold text-platinum-gray font-label-lg">Rahul Sharma</div>
+<div class="text-label-sm text-platinum-gray/50 uppercase tracking-wider">Investor, Delhi NCR</div>
+</div>
+</div>
+</div>
+<div class="min-w-[350px] md:min-w-[450px] snap-center glass-card p-10 rounded-2xl hover:border-estate-gold/30 transition-colors">
+<div class="flex text-estate-gold mb-6 gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-platinum-gray/80 font-body-lg italic mb-8 leading-relaxed">"Mr. Naresh Arora is extremely professional. My property purchase was completed smoothly, and his guidance was invaluable."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-midnight-navy border border-estate-gold/30 rounded-full flex items-center justify-center text-estate-gold font-headline-md">A</div>
+<div>
+<div class="font-bold text-platinum-gray font-label-lg">Arpit Srivastava</div>
+<div class="text-label-sm text-platinum-gray/50 uppercase tracking-wider">Home Buyer</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiry Form Section -->
+<section class="py-section-gap bg-surface-container-low border-t border-estate-gold/10 relative overflow-hidden fade-in-section">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-estate-gold mb-6 italic">Secure Your Portfolio's Future</h2>
+<p class="font-body-lg text-body-lg text-platinum-gray/70 mb-12 max-w-lg">Whether you are looking for a luxury residence in Dubai or a high-growth investment in Dubai, our advisors are ready to guide you.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6 group">
+<div class="w-14 h-14 rounded-full border border-estate-gold/20 flex items-center justify-center text-estate-gold group-hover:bg-estate-gold group-hover:text-midnight-navy transition-all">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-label-sm text-platinum-gray/50 uppercase tracking-widest mb-1">Call Our Advisors</p>
+<p class="text-headline-md text-platinum-gray font-headline-md">+971-506 884518</p>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-14 h-14 rounded-full border border-estate-gold/20 flex items-center justify-center text-estate-gold group-hover:bg-estate-gold group-hover:text-midnight-navy transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-label-sm text-platinum-gray/50 uppercase tracking-widest mb-1">Official Email</p>
+<p class="text-headline-md text-platinum-gray font-headline-md">info@aroraarealestate.ae</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 md:p-14 rounded-2xl shadow-2xl relative">
+<form class="space-y-8">
+<div>
+<label class="block text-label-sm text-platinum-gray/70 uppercase tracking-widest mb-3">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-platinum-gray/20 focus:ring-0 focus:border-estate-gold text-platinum-gray p-0 pb-3 transition-colors placeholder:text-platinum-gray/20 text-body-lg" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block text-label-sm text-platinum-gray/70 uppercase tracking-widest mb-3">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-platinum-gray/20 focus:ring-0 focus:border-estate-gold text-platinum-gray p-0 pb-3 transition-colors placeholder:text-platinum-gray/20 text-body-lg" placeholder="email@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-label-sm text-platinum-gray/70 uppercase tracking-widest mb-3">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-platinum-gray/20 focus:ring-0 focus:border-estate-gold text-platinum-gray p-0 pb-3 transition-colors placeholder:text-platinum-gray/20 text-body-lg" placeholder="+91 ..." type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm text-platinum-gray/70 uppercase tracking-widest mb-3">Area of Interest</label>
+<select class="w-full bg-transparent border-0 border-b border-platinum-gray/20 focus:ring-0 focus:border-estate-gold text-platinum-gray p-0 pb-3 transition-colors appearance-none cursor-pointer text-body-lg">
+<option class="bg-midnight-navy text-platinum-gray">Select Portfolio</option>
+<option class="bg-midnight-navy text-platinum-gray">Dubai & UAE Projects</option>
+<option class="bg-midnight-navy text-platinum-gray">Dubai & UAE Projects</option>
+<option class="bg-midnight-navy text-platinum-gray">Both</option>
+</select>
+</div>
+<button class="w-full bg-estate-gold text-midnight-navy font-bold py-5 mt-4 rounded hover:bg-opacity-90 hover:shadow-lg hover:shadow-estate-gold/20 transition-all duration-300 tracking-wider" type="submit">SCHEDULE PRIVATE CONSULTATION</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+<div class="container">
+<div class="row g-4">
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mb-4 d-flex align-items-center justify-content-center">
+  <img src="aroraa-logo.webp" alt="Aroraa Real Estate LLC Logo" class="img-fluid me-3" style="height: 48px; width: auto; filter: brightness(1.1);" loading="lazy" />
+  <div class="d-flex flex-column text-start">
+    <span class="brand-urban" style="color: #c9a55f !important; font-size: 1.7rem; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px; font-weight: 700; line-height: 1;">ARORAA</span>
+    <span class="brand-investors" style="color: #c9a55f !important; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; font-family: 'Times New Roman', Times, serif; line-height: 1; margin-top: 3px; white-space: nowrap; text-transform: uppercase;">Real Estate LLC</span>
+  </div>
+</div>
+<p class="text-white-50 mb-4">
+            Redefining luxury real estate investment through expertise, exclusivity, and exceptional service for
+            discerning clients worldwide.
+          </p>
+<div class="social-links d-flex justify-content-center">
+<a aria-label="Facebook" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://www.facebook.com/share/1BMVpsfrGr/" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
+<a aria-label="LinkedIn" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://www.linkedin.com/in/aroraa-realestate-dubai?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
+<a aria-label="WhatsApp" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://wa.me/971506884518" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-whatsapp text-white"></i></a>
+<a aria-label="Instagram" class="bg-primary rounded-circle d-flex align-items-center justify-content-center" href="https://www.instagram.com/aroraarealestate.official?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-instagram text-white"></i></a>
+<a aria-label="YouTube" class="bg-primary rounded-circle d-flex align-items-center justify-content-center ms-3" href="https://youtube.com/@aroraa_realestatellc?si=1WuZGeUebwACyr7Y" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-youtube text-white"></i></a>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<h6 class="fw-bold mb-4 text-accent">Quick Links</h6>
+<ul class="list-unstyled">
+<li class="mb-2">
+<a class="text-white-50 text-decoration-none" href="index">Home</a>
+</li>
+<li class="mb-2">
+<a class="text-white-50 text-decoration-none" href="about">About</a>
+</li>
+<li class="mb-2">
+<a class="text-white-50 text-decoration-none" href="properties">Properties</a>
+</li>
+<li class="mb-2">
+<a class="text-white-50 text-decoration-none" href="careers">Careers</a>
+</li>
+<li class="mb-2">
+<a class="text-white-50 text-decoration-none" href="channel-partners">Channel Partners</a>
+</li>
+<li class="mb-2">
+<a class="text-white-50 text-decoration-none" href="contact">Contact</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<h6 class="fw-bold mb-4 text-accent">Head Office</h6>
+<p class="text-white-50 mb-3 fw-bold">ARORAA REAL ESTATE LLC</p>
+<ul class="list-unstyled">
+<li class="mb-3">
+<div class="d-flex align-items-start justify-content-center">
+<i class="fas fa-envelope me-3 mt-1 text-white-50"></i>
+<span class="text-white-50">info@aroraarealestate.ae</span>
+</div>
+</li>
+<li class="mb-3">
+<div class="d-flex align-items-start justify-content-center">
+<i class="fas fa-phone me-3 mt-1 text-white-50"></i>
+<span class="text-white-50">+971-506 884518</span>
+</div>
+</li>
+<li class="mb-3">
+<div class="d-flex align-items-start justify-content-center">
+<i class="fas fa-map-marker-alt me-3 mt-1 text-white-50"></i>
+<span class="text-white-50">Addiyar Building 58 B, Sheikh Zayed Road, Al Wasl Dubai, UAE-237951.</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+            <h6 class="fw-bold mb-4 text-accent">Developer Partners</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><span class="text-white-50">Emaar Properties</span></li>
+              <li class="mb-2"><span class="text-white-50">DAMAC Properties</span></li>
+              <li class="mb-2"><span class="text-white-50">Sobha Realty</span></li>
+              <li class="mb-2"><span class="text-white-50">Azizi Developments</span></li>
+              <li class="mb-2"><span class="text-white-50">Danube Properties</span></li>
+            </ul>
+          </div>
+</div>
+<hr class="my-4 border-secondary"/>
+<div class="row align-items-center g-4">
+<div class="col-md-6">
+<p class="text-white-75 mb-0 text-center">
+            © 2026 Aroraa Real Estate LLC. All rights reserved.
+          </p>
+</div>
+<div class="col-md-6 text-center">
+<a class="text-accent text-decoration-none me-4" href="privacy-policy">Privacy Policy</a>
+<a class="text-accent text-decoration-none me-4" href="terms-and-conditions">Terms of Service</a>
+<a class="text-accent text-decoration-none" href="cookie-policy">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Setup Intersection Observer for fade-in animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<!-- AOS Scroll Animations JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 500,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 50
+      });
+    }
+  });
+</script>
+</body></html>

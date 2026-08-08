@@ -1,0 +1,50 @@
+User-agent: *
+Allow: /
+
+# Block build/script files
+Disallow: /dist/
+Disallow: /build_scripts/
+Disallow: /*.js$
+Disallow: /*.py$
+
+# Allow all HTML and assets
+Allow: /*.html$
+Allow: /*.css$
+Allow: /images/
+
+# AI Search Engine Crawlers - Explicitly Allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://aroraarealestate.in/sitemap.xml
+
+# LLMs context file
+llms.txt: https://aroraarealestate.in/llms.txt

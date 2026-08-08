@@ -1,0 +1,157 @@
+# ===================================================
+# Aroraa Real Estate - Hostinger .htaccess
+# Optimized for performance, SEO & security
+# ===================================================
+
+# ── Force HTTPS ──
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── Force non-www (canonical domain) ──
+RewriteCond %{HTTP_HOST} ^www\.aroraarealestate\.in [NC]
+RewriteRule ^(.*)$ https://aroraarealestate.in/$1 [L,R=301]
+
+# ── Pretty URLs: remove .html extension ──
+# Send /index or /index.html to the homepage "/"
+RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# Redirect any direct request for /page.html to the clean /page (301, avoids duplicate URLs)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Internally serve /page from the real /page.html file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── Gzip Compression ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ── Browser Caching ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML - short cache (content changes)
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS & JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+
+  # JSON & XML
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType application/ld+json "access plus 1 day"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+
+  # Manifest
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+# ── Cache-Control Headers ──
+<IfModule mod_headers.c>
+  # HTML - must revalidate
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # CSS & JS - long cache
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000, immutable"
+  </FilesMatch>
+
+  # Images - very long cache
+  <FilesMatch "\.(ico|jpg|jpeg|png|gif|webp|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Fonts - very long cache
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# ── Security Headers ──
+<IfModule mod_headers.c>
+  # Prevent MIME-sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Clickjacking protection
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # XSS protection
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions policy
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
+
+  # Strict Transport Security (HSTS) - 1 year
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ── ETag Configuration ──
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# ── Prevent Directory Listing ──
+Options -Indexes
+
+# ── Block Access to Sensitive Files ──
+<FilesMatch "\.(py|git|env|log|bak|sql|sh)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# ── Custom Error Pages (optional) ──
+ErrorDocument 404 /index.html
+
+# ── MIME Types ──
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/javascript .js
+  AddType text/css .css
+</IfModule>

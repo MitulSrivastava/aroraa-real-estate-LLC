@@ -1,0 +1,12 @@
+# OS / editor junk
+.DS_Store
+**/.DS_Store
+.vscode/
+
+# Deployment artifacts & secrets
+*.zip
+.env
+
+# Local build/scratch
+deploy-clean.zip
+scratch/
