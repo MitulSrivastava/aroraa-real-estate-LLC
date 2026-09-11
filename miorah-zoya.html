@@ -196,8 +196,8 @@
 <a class="nav-link" href="about">About</a>
 </li>
 <li class="nav-item">
-            <a class="nav-link" href="uae-projects">Projects</a>
-          </li>
+<a class="nav-link nav-active" href="uae-projects">Projects</a>
+</li>
 <li class="nav-item">
 <a class="nav-link" href="careers">Careers</a>
 </li>
@@ -235,29 +235,28 @@
 <div class="row align-items-start mb-4">
 <div class="col-lg-9">
 <!-- Badges -->
-<div class="d-flex flex-wrap gap-2 mb-3">
+<div class="hero-badges d-flex flex-wrap gap-2 mb-3">
 <span class="badge fw-semibold rounded-pill px-3 py-2 d-inline-flex align-items-center gap-2" style="background: rgba(201,165,95,0.15); border: 1.5px solid #c9a55f; color: #c9a55f; backdrop-filter: blur(8px); font-size: 0.82rem;"><i class="fas fa-sun me-1"></i> A Life of Light</span>
 <span class="badge fw-semibold rounded-pill px-3 py-2 d-inline-flex align-items-center gap-2" style="background: rgba(201,165,95,0.15); border: 1.5px solid #c9a55f; color: #c9a55f; backdrop-filter: blur(8px); font-size: 0.82rem;"><i class="fas fa-gem me-1"></i> Premium Residences</span>
 </div>
 <!-- Title -->
-<h1 class="fw-bold mb-2" style="font-size:2.6rem; line-height:1.15; color:#ffffff;">Miorah by Zoya <span style="color:#c9a55f; font-size: 1.5rem; display: block; margin-top: 10px;">Luxury Living in Dubai South</span></h1>
+<h1 class="fw-bold mb-0 project-title-gradient" style="font-size:2.6rem; line-height:1.15;">Miorah by Zoya <span style="color:#c9a55f; font-size: 1.5rem; display: block; margin-top: 10px;">Luxury Living in Dubai South</span></h1>
 <!-- Location row -->
 <div class="d-flex flex-wrap align-items-center gap-3 mb-2" style="color:rgba(255,255,255,0.8); font-size:0.95rem;">
 <span><i class="fas fa-map-marker-alt me-1" style="color:#c9a55f;"></i> Dubai South</span>
 </div>
 <!-- Builder + RERA -->
 <div class="d-flex flex-wrap align-items-center gap-3" style="color:rgba(255,255,255,0.65); font-size:0.88rem;">
-<span><i class="fas fa-building me-1"></i> Master Developer: <strong style="color:#c9a55f;">Zoya Developments</strong></span>
 </div>
 </div>
 <!-- Action Buttons -->
 <div class="col-lg-3 d-flex gap-2 justify-content-lg-end align-items-start mt-3 mt-lg-0">
-<button class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill" id="shortlistBtn" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.85rem;">
-<i class="fas fa-heart" style="color:#c9a55f;"></i> Save
-            </button>
-<button class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill" id="shareBtn" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.85rem;">
+<a class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="background:rgba(255,255,255,0.08); border:1px solid rgba(201,165,95,0.6); color:#c9a55f; font-size:0.85rem; text-decoration:none; backdrop-filter: blur(8px); white-space: nowrap;" target="_blank">
+<i class="fab fa-whatsapp" style="color:#25D366; font-size: 1.1rem;"></i> <span class="fw-semibold">Get Brochure &amp; Price</span>
+</a>
+<button class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill" id="shareBtn" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.85rem; backdrop-filter: blur(8px); white-space: nowrap;">
 <i class="fas fa-share-alt" style="color:#c9a55f;"></i> Share
-            </button>
+                </button>
 </div>
 </div>
 <!-- ── Media Grid ── -->
@@ -270,6 +269,7 @@
 <i class="fas fa-video me-1"></i>
 <span>Premium residential development in Dubai South</span>
 </div>
+
 </div>
 </div>
 <!-- Right image grid -->
@@ -294,28 +294,52 @@
 </div>
 </div><!-- /container -->
 </section>
-<!-- ── PRICE BAR (gold accent line) ── -->
-<div style="background:#0b1c3c; border-bottom:3px solid #c9a55f;">
+<!-- ── PRICE BAR ── -->
+<div class="property-price-bar">
 <div class="container py-3">
-<div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-<div class="d-flex align-items-center gap-3">
-<div class="d-flex align-items-center justify-content-center rounded-circle" style="width:46px; height:46px; background:rgba(201,165,95,0.15); border:1px solid rgba(201,165,95,0.4);">
-<i class="fas fa-money-bill-wave" style="color:#c9a55f;"></i>
+<div class="price-bar-wrapper">
+<div class="price-bar-left">
+<div class="price-left-main">
+<div class="price-icon-box">
+<i class="fas fa-money-bill-wave"></i>
 </div>
 <div>
-<div class="fw-bold" style="color:#fff; font-size:1.5rem; line-height:1.1;">AED 640K* Onwards</div>
-<div style="color:rgba(255,255,255,0.6); font-size:0.82rem;">1, 2 &amp; 3 Bedroom Luxury Apartments</div>
+<div class="price-val">AED 640K* Onwards</div>
+<div class="price-sub">1, 2 &amp; 3 Bedroom Luxury Apartments</div>
 </div>
 </div>
-<div class="d-flex align-items-center gap-3 flex-wrap">
-<div class="d-flex align-items-center gap-2" style="color:rgba(255,255,255,0.7); font-size:0.88rem;">
+<span class="price-status-badge d-md-none"><i class="fas fa-star me-1"></i>New Launch</span>
+</div>
+<div class="price-bar-right">
+<div class="price-status-wrap d-none d-md-flex">
 <i class="fas fa-rocket" style="color:#c9a55f;"></i>
-<span>Project Status:</span>
-<span class="badge fw-semibold rounded-pill px-3 py-2 d-inline-flex align-items-center gap-2" style="background: rgba(201,165,95,0.15); border: 1.5px solid #c9a55f; color: #c9a55f; backdrop-filter: blur(8px); font-size: 0.82rem;"><i class="fas fa-star me-1"></i>New Launch</span>
+<span class="price-status-label">Project Status:</span>
+<span class="price-status-badge"><i class="fas fa-star me-1"></i>New Launch</span>
 </div>
-<a class="btn btn-sm px-4 py-2 fw-semibold rounded-pill" href="#contact" style="background:#c9a55f; color:#0b1c3c; border:none; font-size:0.85rem;">
-              Get Callback
-            </a>
+<div class="d-none d-md-flex align-items-center gap-2">
+  <button class="btn price-action-btn" data-bs-toggle="modal" data-bs-target="#priceInsightsModal" type="button">
+    <i class="fas fa-chart-line me-1"></i> Price Insights
+  </button>
+  <button class="btn price-action-btn" data-bs-toggle="modal" data-bs-target="#compareRoiModal" type="button">
+    <i class="fas fa-exchange-alt me-1"></i> Compare ROI
+  </button>
+  <a class="btn price-callback-btn" href="https://wa.me/971506884518?text=I+am+interested+in+Miorah+by+Zoya+Luxury+Living+in+Dubai+South." target="_blank">
+    <i class="fas fa-phone-alt me-1"></i> Get Callback
+  </a>
+</div>
+<div class="d-flex d-md-none flex-column gap-2 mt-2 w-100">
+  <div class="d-flex gap-2 w-100">
+    <button class="btn price-action-btn flex-fill justify-content-center" data-bs-toggle="modal" data-bs-target="#priceInsightsModal" type="button">
+      <i class="fas fa-chart-line me-1"></i> Price Insights
+    </button>
+    <button class="btn price-action-btn flex-fill justify-content-center" data-bs-toggle="modal" data-bs-target="#compareRoiModal" type="button">
+      <i class="fas fa-exchange-alt me-1"></i> Compare ROI
+    </button>
+  </div>
+  <a class="btn price-callback-btn justify-content-center w-100" href="https://wa.me/971506884518?text=I+am+interested+in+Miorah+by+Zoya+Luxury+Living+in+Dubai+South." target="_blank">
+    <i class="fas fa-phone-alt me-1"></i> Get Callback
+  </a>
+</div>
 </div>
 </div>
 </div>
@@ -528,6 +552,11 @@
 <p class="lead text-muted">
             The residences showcase thoughtfully planned layouts, premium finishes, and world-class luxury.
           </p>
+<div class="mt-4">
+<button class="btn rounded-pill px-4 py-2 fw-bold shadow-sm d-inline-flex align-items-center gap-2" data-bs-target="#priceInsightsModal" data-bs-toggle="modal" style="border: 2px solid #0b1c3c; color: #0b1c3c; background: #fff; font-size: 0.95rem; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;" type="button">
+<i class="fas fa-chart-line"></i> PRICE INSIGHTS
+      </button>
+</div>
 </div>
 <div class="d-none d-lg-block">
 <div class="table-responsive rounded-4 shadow-lg overflow-hidden border" style="border-color: rgba(201, 165, 95, 0.3) !important;">
@@ -566,7 +595,7 @@
 <span class="badge bg-success rounded-pill px-3 py-1" style="font-size: 0.78rem;">Available</span>
 </td>
 <td class="py-4 px-4 text-center border-0">
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="#contact" style="font-size: 0.78rem; white-space: nowrap;">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION%201%20Bedroom%20Apartments%20at%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </td>
@@ -594,7 +623,7 @@
 <span class="badge bg-success rounded-pill px-3 py-1" style="font-size: 0.78rem;">Available</span>
 </td>
 <td class="py-4 px-4 text-center border-0">
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="#contact" style="font-size: 0.78rem; white-space: nowrap;">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION%202%20Bedroom%20Apartments%20at%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </td>
@@ -622,7 +651,7 @@
 <span class="badge bg-success rounded-pill px-3 py-1" style="font-size: 0.78rem;">Available</span>
 </td>
 <td class="py-4 px-4 text-center border-0">
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="#contact" style="font-size: 0.78rem; white-space: nowrap;">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION%203%20Bedroom%20Apartments%20at%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </td>
@@ -655,7 +684,7 @@
 </div>
 </div>
 </div>
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="#contact" style="font-size: 0.78rem; white-space: nowrap;">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION1%20Bedroom%20Apartments%20at%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </div>
@@ -681,7 +710,7 @@
 </div>
 </div>
 </div>
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="#contact" style="font-size: 0.78rem; white-space: nowrap;">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION2%20Bedroom%20Apartments%20at%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </div>
@@ -707,7 +736,7 @@
 </div>
 </div>
 </div>
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="#contact" style="font-size: 0.78rem; white-space: nowrap;">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION3%20Bedroom%20Apartments%20at%20Miorah%20by%20Zoya%20Luxury%20Living%20in%20Dubai%20South.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </div>
@@ -833,6 +862,11 @@
 <p class="lead text-muted">
             Dubai's Strongest Growth Corridor &amp; Zoya Developments
           </p>
+<div class="mt-4">
+<button class="btn rounded-pill px-4 py-2 fw-bold shadow-sm d-inline-flex align-items-center gap-2" data-bs-target="#compareRoiModal" data-bs-toggle="modal" style="border: 2px solid #c9a55f; color: #c9a55f; background: #0b1c3c; font-size: 0.95rem; text-decoration: none;" type="button">
+<i class="fas fa-exchange-alt"></i> Compare ROI
+      </button>
+</div>
 </div>
 <div class="row g-4 align-items-center">
 <div class="col-lg-6">
@@ -1021,11 +1055,11 @@
 <div class="row g-4">
 <div class="col-lg-3 col-md-6 text-center">
 <div class="mb-4 d-flex align-items-center justify-content-center">
-  <img src="aroraa-logo.webp" alt="Aroraa Real Estate LLC Logo" class="img-fluid me-3" style="height: 48px; width: auto; filter: brightness(1.1);" loading="lazy" />
-  <div class="d-flex flex-column text-start">
-    <span class="brand-urban" style="color: #c9a55f !important; font-size: 1.7rem; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px; font-weight: 700; line-height: 1;">ARORAA</span>
-    <span class="brand-investors" style="color: #c9a55f !important; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; font-family: 'Times New Roman', Times, serif; line-height: 1; margin-top: 3px; white-space: nowrap; text-transform: uppercase;">Real Estate LLC</span>
-  </div>
+<img alt="Aroraa Real Estate LLC Logo" class="img-fluid me-3" loading="lazy" src="aroraa-logo.webp" style="height: 48px; width: auto; filter: brightness(1.1);"/>
+<div class="d-flex flex-column text-start">
+<span class="brand-urban" style="color: #c9a55f !important; font-size: 1.7rem; font-family: 'Times New Roman', Times, serif; letter-spacing: 1.5px; font-weight: 700; line-height: 1;">ARORAA</span>
+<span class="brand-investors" style="color: #c9a55f !important; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.2px; font-family: 'Times New Roman', Times, serif; line-height: 1; margin-top: 3px; white-space: nowrap; text-transform: uppercase;">Real Estate LLC</span>
+</div>
 </div>
 <p class="text-white-50 mb-4">
             Redefining luxury real estate investment through expertise, exclusivity, and exceptional service for
@@ -1087,15 +1121,15 @@
 </ul>
 </div>
 <div class="col-lg-3 col-md-6 text-center">
-            <h6 class="fw-bold mb-4 text-accent">Developer Partners</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><span class="text-white-50">Emaar Properties</span></li>
-              <li class="mb-2"><span class="text-white-50">DAMAC Properties</span></li>
-              <li class="mb-2"><span class="text-white-50">Sobha Realty</span></li>
-              <li class="mb-2"><span class="text-white-50">Azizi Developments</span></li>
-              <li class="mb-2"><span class="text-white-50">Danube Properties</span></li>
-            </ul>
-          </div>
+<h6 class="fw-bold mb-4 text-accent">Developer Partners</h6>
+<ul class="list-unstyled">
+<li class="mb-2"><span class="text-white-50">Emaar Properties</span></li>
+<li class="mb-2"><span class="text-white-50">DAMAC Properties</span></li>
+<li class="mb-2"><span class="text-white-50">Sobha Realty</span></li>
+<li class="mb-2"><span class="text-white-50">Azizi Developments</span></li>
+<li class="mb-2"><span class="text-white-50">Danube Properties</span></li>
+</ul>
+</div>
 </div>
 <hr class="my-4 border-secondary"/>
 <div class="row align-items-center g-4">
@@ -1269,6 +1303,187 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+</script>
+<!-- Exit Intent Modal -->
+<div aria-hidden="true" aria-labelledby="exitModalLabel" class="modal fade" id="exitModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+<div class="modal-body p-0 text-center position-relative">
+<button aria-label="Close" class="btn-close position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" type="button"></button>
+<div class="bg-light py-5 px-4">
+<div class="mb-3 d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-circle" style="width:60px; height:60px; font-size:24px; background: #0b1c3c !important;">
+<i class="fas fa-gift"></i>
+</div>
+<h3 class="fw-bold mb-2" style="color: #0b1c3c;">Wait! Don't Miss Out</h3>
+<p class="text-muted mb-4 px-2">Get exclusive pre-launch prices &amp; a free property consultation. Our property expert will call you within 24hrs.</p>
+<form class="px-3 pb-3 text-start" id="exitForm">
+<input class="form-control mb-3 py-2" name="full_name" placeholder="Your Name" required="" type="text"/>
+<input class="form-control mb-3 py-2" name="phone" placeholder="Your Phone Number" required="" type="tel"/>
+<input name="interested_in" type="hidden" value="Exit Intent Lead"/>
+<input class="exit-source-project" name="source" type="hidden" value=""/>
+<button class="btn w-100 fw-bold py-2" style="background: #c9a55f; color: #0b1c3c;" type="submit"><i class="fas fa-phone-alt me-2"></i>Get My Free Consultation</button>
+<div class="mt-3 text-center text-muted" style="font-size:0.75rem;"><i class="fas fa-shield-alt text-success me-1"></i>100% Free • No Spam • Your data is safe</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let exitModalTriggered = sessionStorage.getItem('exitModalTriggered');
+  
+  if(!exitModalTriggered) {
+    const triggerExitModal = () => {
+      if(!sessionStorage.getItem('exitModalTriggered')) {
+        let exitModalElement = document.getElementById('exitModal');
+        if (exitModalElement) {
+          let exitModal = new bootstrap.Modal(exitModalElement);
+          exitModal.show();
+          sessionStorage.setItem('exitModalTriggered', 'true');
+          
+          let projectName = document.title.split('|')[0].trim();
+          let sourceInput = document.querySelector('.exit-source-project');
+          if (sourceInput) sourceInput.value = projectName;
+        }
+      }
+    };
+
+    // Desktop: Mouse out to top
+    document.addEventListener('mouseout', function(e) {
+      if(!e.relatedTarget && e.clientY < 20) {
+        triggerExitModal();
+      }
+    });
+
+    // Mobile: Fast scroll up
+    let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+    let lastScrollTime = Date.now();
+    document.addEventListener('scroll', function() {
+      if (sessionStorage.getItem('exitModalTriggered')) return;
+      let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+      let currentTime = Date.now();
+      let distance = lastScrollTop - currentScrollTop;
+      let timeDelta = currentTime - lastScrollTime;
+      
+      // If scrolling up fast enough (> 1.5px/ms) and scrolled a decent amount (> 50px)
+      if (distance > 50 && timeDelta > 0 && (distance / timeDelta) > 1.5) {
+        triggerExitModal();
+      }
+      
+      lastScrollTop = currentScrollTop;
+      lastScrollTime = currentTime;
+    }, { passive: true });
+  }
+
+  const exitForm = document.getElementById("exitForm");
+  if (exitForm) {
+    exitForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!exitForm.checkValidity()) {
+        exitForm.classList.add('was-validated');
+        return;
+      }
+      if (typeof submitViaIframe === 'function') {
+        submitViaIframe(exitForm, "Thank you! Our expert will call you shortly.");
+      }
+    });
+  }
+});
+</script>
+
+<div aria-hidden="true" aria-labelledby="priceInsightsModalLabel" class="modal fade" id="priceInsightsModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+<div class="modal-header text-white" style="background: #0b1c3c; border-bottom: 2px solid #c9a55f;">
+<h5 class="modal-title fw-bold" id="priceInsightsModalLabel"><i class="fas fa-chart-line me-2"></i> Unlock Price Insights</h5>
+<button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body p-4 text-center bg-light">
+<p class="text-muted mb-4 px-2" style="font-size:0.95rem;">Get immediate access to the complete pricing inventory, payment plans, and historical price trends.</p>
+<form class="text-start" id="priceInsightsForm">
+<div class="mb-3">
+<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">Full Name <span class="text-danger">*</span></label>
+<input class="form-control py-2" name="full_name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div class="mb-4">
+<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">WhatsApp Number <span class="text-danger">*</span></label>
+<input class="form-control py-2" name="phone" placeholder="+971..." required="" type="tel"/>
+</div>
+<input name="interested_in" type="hidden" value="Price Insights"/>
+<input class="pi-source-project" name="source" type="hidden" value=""/>
+<button class="btn w-100 fw-bold py-2 shadow-sm" style="background: #c9a55f; color: #0b1c3c;" type="submit">GET INSTANT ACCESS</button>
+<div class="mt-3 text-center text-muted" style="font-size:0.75rem;"><i class="fas fa-lock text-success me-1"></i>100% Secure. We respect your privacy.</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="compareRoiModalLabel" class="modal fade" id="compareRoiModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+<div class="modal-body p-4 text-center bg-light position-relative">
+<button aria-label="Close" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" type="button"></button>
+<div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="background: rgba(201,165,95,0.15); color: #c9a55f;" style="width:60px; height:60px; font-size:24px;">
+<i class="fas fa-balance-scale"></i>
+</div>
+<h3 class="fw-bold mb-2" style="color: #333;">Compare Investment ROI</h3>
+<p class="text-muted mb-4 px-2" style="font-size:0.95rem;">Select a property to compare to find your perfect investment.</p>
+<form class="text-start" id="compareRoiForm">
+<div class="mb-3">
+<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">Full Name <span class="text-danger">*</span></label>
+<input class="form-control py-2" name="full_name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="mb-4">
+<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">WhatsApp Number <span class="text-danger">*</span></label>
+<input class="form-control py-2" name="phone" placeholder="+971..." required="" type="tel"/>
+</div>
+<input name="interested_in" type="hidden" value="Compare ROI"/>
+<input class="roi-source-project" name="source" type="hidden" value=""/>
+<button class="btn w-100 fw-bold py-2 shadow-sm" style="background: #c9a55f; color: #0b1c3c;" type="submit"><i class="fas fa-file-pdf me-2"></i>Generate Comparison Report</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const piForm = document.getElementById("priceInsightsForm");
+  const roiForm = document.getElementById("compareRoiForm");
+  let projectName = document.title.split('|')[0].trim();
+  
+  if (piForm) {
+    let piSource = piForm.querySelector('.pi-source-project');
+    if (piSource) piSource.value = projectName;
+    piForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (!piForm.checkValidity()) {
+        piForm.classList.add('was-validated');
+        return;
+      }
+      if (typeof submitViaIframe === 'function') {
+        submitViaIframe(piForm, "Thank you! We will share the Price Insights shortly.");
+      }
+    });
+  }
+  
+  if (roiForm) {
+    let roiSource = roiForm.querySelector('.roi-source-project');
+    if (roiSource) roiSource.value = projectName;
+    roiForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (!roiForm.checkValidity()) {
+        roiForm.classList.add('was-validated');
+        return;
+      }
+      if (typeof submitViaIframe === 'function') {
+        submitViaIframe(roiForm, "Thank you! Your ROI Comparison Report is being generated.");
+      }
+    });
+  }
+});
 </script>
 </body>
 </html>
