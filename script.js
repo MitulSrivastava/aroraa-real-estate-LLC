@@ -2130,3 +2130,388 @@ document.addEventListener(
   },
   true
 );
+
+
+// --- Auto-generated ROI Compare Modal Logic ---
+const aroraaProjects = [
+  {
+    "id": "palace-residences.html",
+    "title": "PALACE RESIDENCES",
+    "region": "Dubai",
+    "location": "Dubai Creek Harbour, Dubai"
+  },
+  {
+    "id": "do-hotels-residences.html",
+    "title": "DO HOTELS & RESIDENCES DUBAI ISLANDS",
+    "region": "Dubai",
+    "location": "Dubai Islands, Dubai"
+  },
+  {
+    "id": "nuve-zoya.html",
+    "title": "NUV\u00c9 by Zoya Luxury Residences in DLRC",
+    "region": "Dubai",
+    "location": "Dubai Land Residence Complex (DLRC)"
+  },
+  {
+    "id": "monaco-mansions.html",
+    "title": "MONACO MANSIONS AT AZIZI VENICE",
+    "region": "Dubai",
+    "location": "Dubai South, Dubai"
+  },
+  {
+    "id": "one-residence.html",
+    "title": "ONE RESIDENCE",
+    "region": "Dubai",
+    "location": "Al Reem Island, Abu Dhabi"
+  },
+  {
+    "id": "mangrove.html",
+    "title": "MANGROVE",
+    "region": "Dubai",
+    "location": "Creek Beach, Dubai Creek Harbour"
+  },
+  {
+    "id": "samana-business-hub.html",
+    "title": "SAMANA BUSINESS HUB",
+    "region": "Dubai",
+    "location": "Downtown Jebel Ali, Dubai"
+  },
+  {
+    "id": "samana-boulevard-heights.html",
+    "title": "SAMANA BOULEVARD HEIGHTS",
+    "region": "Dubai",
+    "location": "Dubai Residence Complex, Dubailand"
+  },
+  {
+    "id": "taj-wellington-mews.html",
+    "title": "TAJ WELLINGTON MEWS",
+    "region": "Dubai",
+    "location": "Al Marjan Island, Ras Al Khaimah"
+  },
+  {
+    "id": "valia.html",
+    "title": "VALIA",
+    "region": "Dubai",
+    "location": "Dubai Creek Harbour, Dubai"
+  },
+  {
+    "id": "sobha-sanctuary.html",
+    "title": "SOBHA SANCTUARY",
+    "region": "Dubai",
+    "location": "Dubai, UAE"
+  },
+  {
+    "id": "ramada-residences.html",
+    "title": "RAMADA RESIDENCES",
+    "region": "Dubai",
+    "location": "Al Jaddaf, Dubai"
+  },
+  {
+    "id": "cedar.html",
+    "title": "CEDAR",
+    "region": "Dubai",
+    "location": "Creek Beach, Dubai Creek Harbour"
+  },
+  {
+    "id": "sobha-hartland-2.html",
+    "title": "SOBHA HARTLAND II",
+    "region": "Dubai",
+    "location": "Nad Al Sheba, Dubai"
+  },
+  {
+    "id": "parkway.html",
+    "title": "PARKWAY",
+    "region": "Dubai",
+    "location": "MBR City, Dubai"
+  },
+  {
+    "id": "azizi-venice.html",
+    "title": "AZIZI VENICE",
+    "region": "Dubai",
+    "location": "Dubai South, Dubai"
+  },
+  {
+    "id": "creek-waters-2.html",
+    "title": "CREEK WATERS 2",
+    "region": "Dubai",
+    "location": "Creek Island, Dubai Creek Harbour"
+  },
+  {
+    "id": "samana-greenfield.html",
+    "title": "SAMANA GREENFIELD",
+    "region": "Dubai",
+    "location": "Al Warsan, Dubai"
+  },
+  {
+    "id": "montiva-by-vida.html",
+    "title": "MONTIVA BY VIDA",
+    "region": "Dubai",
+    "location": "Green Gate District, Dubai Creek Harbour"
+  },
+  {
+    "id": "hilton-residences.html",
+    "title": "HILTON RESIDENCES DUBAI MARITIME CITY",
+    "region": "Dubai",
+    "location": "Dubai Maritime City, Dubai"
+  },
+  {
+    "id": "dubai-hills-vista.html",
+    "title": "DUBAI HILLS VISTA",
+    "region": "Dubai",
+    "location": "Dubai Hills Estate, Dubai"
+  },
+  {
+    "id": "laguna-residence.html",
+    "title": "LAGUNA RESIDENCE",
+    "region": "Dubai",
+    "location": "Dubai Land, Dubai"
+  },
+  {
+    "id": "fauchon-residences.html",
+    "title": "FAUCHON R\u00c9SIDENCES",
+    "region": "Dubai",
+    "location": "Jumeirah Garden City, Dubai"
+  },
+  {
+    "id": "the-archive-by-imtiaz.html",
+    "title": "THE ARCHIVE",
+    "region": "Dubai",
+    "location": "DLRC, Dubai Residence Complex, Dubai"
+  },
+  {
+    "id": "calisi-zoya.html",
+    "title": "Calisi by Zoya Fully Furnished Residences",
+    "region": "Dubai",
+    "location": "Dubai South"
+  },
+  {
+    "id": "mercedes-benz-places.html",
+    "title": "MERCEDES-BENZ PLACES BINGHATTI CITY",
+    "region": "Dubai",
+    "location": "Nad Al Sheba, Dubai"
+  },
+  {
+    "id": "aspirz-danube.html",
+    "title": "Aspirz by Danube Fully Furnished Residences",
+    "region": "Dubai",
+    "location": "Dubai Sports City"
+  },
+  {
+    "id": "serenz-danube.html",
+    "title": "Serenz by Danube A World of Amenities in JVC",
+    "region": "Dubai",
+    "location": "Jumeirah Village Circle (JVC), Dubai"
+  },
+  {
+    "id": "sobha-city-abu-dhabi.html",
+    "title": "SOBHA CITY ABU DHABI",
+    "region": "Dubai",
+    "location": "Abu Dhabi"
+  },
+  {
+    "id": "sobha-aquacrest.html",
+    "title": "SOBHA AQUACREST",
+    "region": "Dubai",
+    "location": "Downtown Umm Al Quwain"
+  },
+  {
+    "id": "orla-infinity.html",
+    "title": "ORLA INFINITY",
+    "region": "Dubai",
+    "location": "Crescent of Palm Jumeirah, Dubai"
+  },
+  {
+    "id": "palm-jebel-ali.html",
+    "title": "Palm Jebel Ali Ultra Luxury Waterfront Villas",
+    "region": "Dubai",
+    "location": "Dubai, UAE"
+  },
+  {
+    "id": "burj-azizi.html",
+    "title": "BURJ AZIZI",
+    "region": "Dubai",
+    "location": "Sheikh Zayed Road, Dubai"
+  },
+  {
+    "id": "miorah-zoya.html",
+    "title": "Miorah by Zoya Luxury Living in Dubai South",
+    "region": "Dubai",
+    "location": "Dubai South"
+  },
+  {
+    "id": "tonino-lamborghini-residences.html",
+    "title": "TONINO LAMBORGHINI RESIDENCES",
+    "region": "Dubai",
+    "location": "Al Marjan Island, Ras Al Khaimah"
+  },
+  {
+    "id": "mira-villas.html",
+    "title": "MIRA VILLAS DESIGNED BY BENTLEY HOME",
+    "region": "Dubai",
+    "location": "District 11, Mohammed Bin Rashid City (MBR City), Dubai"
+  },
+  {
+    "id": "cybele.html",
+    "title": "CYB\u00c8LE",
+    "region": "Dubai",
+    "location": "Dubai Land Residence Complex, Dubai"
+  },
+  {
+    "id": "river-cove-sobha.html",
+    "title": "River Cove Residences Ultra-Premium Waterfront Living",
+    "region": "Dubai",
+    "location": "Sobha City, Abu Dhabi"
+  },
+  {
+    "id": "damac-islands.html",
+    "title": "DAMAC Islands Ultra-Luxury Waterfront Villa Community",
+    "region": "Dubai",
+    "location": "Dubai, UAE"
+  },
+  {
+    "id": "greenz-danube.html",
+    "title": "Greenz by Danube Nature-Inspired Luxury Townhouses & Villas",
+    "region": "Dubai",
+    "location": "Dubai (Near Silicon Oasis)"
+  },
+  {
+    "id": "raw-district-imtiaz.html",
+    "title": "Raw District Imtiaz Dubai\u2019s Next-Generation Urban Lifestyle Destination",
+    "region": "Dubai",
+    "location": "Sheikh Zayed Road, Downtown Jebel Ali, Dubai, UAE"
+  },
+  {
+    "id": "breez-danube.html",
+    "title": "Breez by Danube Premium Waterfront Living",
+    "region": "Dubai",
+    "location": "Dubai Maritime City"
+  },
+  {
+    "id": "lumena-alta.html",
+    "title": "LUMENA ALTA",
+    "region": "Dubai",
+    "location": "Gateway of Business Bay, Dubai"
+  },
+  {
+    "id": "pristine-zoya.html",
+    "title": "PRISTINE by Zoya Luxury Residences in Al Furjan",
+    "region": "Dubai",
+    "location": "Al Furjan, Dubai"
+  },
+  {
+    "id": "vida-residences-creek-beach.html",
+    "title": "VIDA RESIDENCES CREEK BEACH",
+    "region": "Dubai",
+    "location": "Creek Beach, Dubai Creek Harbour"
+  },
+  {
+    "id": "izel-zoya.html",
+    "title": "IZEL by Zoya Designed for Life",
+    "region": "Dubai",
+    "location": "DubaiLand Residence Complex (DLRC)"
+  },
+  {
+    "id": "kyomi-residences.html",
+    "title": "KYOMI RESIDENCES",
+    "region": "Dubai",
+    "location": "Warsan Fourth, Dubai"
+  },
+  {
+    "id": "radisson-blu-residences.html",
+    "title": "RADISSON BLU RESIDENCES",
+    "region": "Dubai",
+    "location": "RAK Central, Ras Al Khaimah"
+  },
+  {
+    "id": "elanora-zoya.html",
+    "title": "\u00c9lanora by Zoya Fully Furnished Residences",
+    "region": "Dubai",
+    "location": "Dubai Industrial City"
+  }
+];
+
+document.addEventListener("DOMContentLoaded", function() {
+  const roiModal = document.getElementById('compareRoiModal');
+  if (!roiModal) return;
+
+  const modalBody = roiModal.querySelector('.modal-body');
+  if (modalBody && !document.getElementById('roiCompareSelect')) {
+    const modalDialog = roiModal.querySelector('.modal-dialog');
+    if (modalDialog) modalDialog.classList.add('modal-lg');
+    
+    const projectName = document.title.split('|')[0].trim();
+    
+    let location = "";
+    const locIcon = document.querySelector('.fa-map-marker-alt');
+    if (locIcon && locIcon.parentElement && locIcon.parentElement.tagName === 'SPAN') {
+        location = locIcon.parentElement.textContent.trim();
+    }
+    
+    const currentProj = aroraaProjects.find(p => p.title === projectName) || { region: 'Dubai' };
+    const region = currentProj.region;
+    
+    const regionalProjects = aroraaProjects.filter(p => p.region === region && p.title !== projectName);
+    let optionsHtml = '<option value="">✓ Choose a project...</option>';
+    regionalProjects.forEach(p => {
+        optionsHtml += `<option value="${p.title}">${p.title}</option>`;
+    });
+
+    const newHtml = `
+<button aria-label="Close" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" type="button"></button>
+<div class="mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" style="width:60px; height:60px; font-size:24px; color:#c9a55f; background: rgba(201,165,95,0.1);">
+  <i class="fas fa-balance-scale"></i>
+</div>
+<h3 class="fw-bold mb-2" style="color: #333;">Compare Investment ROI</h3>
+<p class="text-muted mb-4 px-2" style="font-size:0.95rem;">Select a property to compare with ${projectName} to find your perfect investment.</p>
+<form class="text-start" id="compareRoiForm">
+  <div class="row mb-4 gx-3">
+    <div class="col-md-6 mb-3 mb-md-0">
+       <div class="p-3 border rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #fff; border-color: rgba(0,0,0,0.08) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+         <div><span class="badge mb-2 px-3 py-1" style="background:#0b1c3c; color:#fff; font-size:0.75rem; font-weight:600; border-radius:12px;">Selected Property</span></div>
+         <h5 class="fw-bold mb-1" style="color:#0b1c3c; font-size:1.1rem;">${projectName}</h5>
+         <div class="text-muted small" style="font-size:0.8rem;">${location}</div>
+       </div>
+    </div>
+    <div class="col-md-6">
+       <div class="p-3 border rounded text-center h-100 d-flex flex-column justify-content-center" style="background: #fff; border: 2px dashed rgba(201,165,95,0.4) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+         <label class="form-label fw-bold mb-2" style="font-size:0.85rem; color:#0b1c3c;">Compare With:</label>
+         <select class="form-select form-select-sm shadow-none" name="compare_with" id="roiCompareSelect" required style="border-radius:8px; border:1px solid #c9a55f; font-size:0.9rem; padding:8px 12px; font-weight:500;">
+           ${optionsHtml}
+         </select>
+       </div>
+    </div>
+  </div>
+  <div class="row mb-4 gx-3">
+    <div class="col-md-6 mb-3 mb-md-0">
+      <label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">Full Name <span class="text-danger">*</span></label>
+      <input class="form-control py-2 shadow-none" name="full_name" placeholder="John Doe" required="" type="text" style="border-radius:8px; border-color:#dee2e6;"/>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">WhatsApp Number <span class="text-danger">*</span></label>
+      <input class="form-control py-2 shadow-none" name="phone" placeholder="+971..." required="" type="tel" style="border-radius:8px; border-color:#dee2e6;"/>
+    </div>
+  </div>
+  <input name="interested_in" type="hidden" value="Compare ROI"/>
+  <input class="roi-source-project" name="source" type="hidden" value="${projectName}"/>
+  <button class="btn w-100 fw-bold py-2 shadow-sm d-flex align-items-center justify-content-center gap-2" style="background: #198754; color: #fff; border-radius:8px; border:none; transition: all 0.3s;" type="submit">
+    <i class="fas fa-file-pdf"></i> Generate Comparison Report
+  </button>
+</form>
+    `;
+    modalBody.innerHTML = newHtml;
+
+    const roiForm = document.getElementById("compareRoiForm");
+    if (roiForm) {
+      roiForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (!roiForm.checkValidity()) {
+          roiForm.classList.add('was-validated');
+          return;
+        }
+        if (typeof submitViaIframe === 'function') {
+          submitViaIframe(roiForm, "Thank you! Your ROI Comparison Report is being generated.");
+        }
+      });
+    }
+  }
+});
