@@ -2487,8 +2487,8 @@ document.addEventListener("DOMContentLoaded", function() {
       <input class="form-control py-2 shadow-none" name="full_name" placeholder="John Doe" required="" type="text" style="border-radius:8px; border-color:#dee2e6;"/>
     </div>
     <div class="col-md-6">
-      <label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">WhatsApp Number <span class="text-danger">*</span></label>
-      <input class="form-control py-2 shadow-none" name="phone" placeholder="+971..." required="" type="tel" style="border-radius:8px; border-color:#dee2e6;"/>
+      <label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">Contact Number <span class="text-danger">*</span></label>
+      <input class="form-control py-2 shadow-none" name="phone"  required="" type="tel" style="border-radius:8px; border-color:#dee2e6;"/>
     </div>
   </div>
   <input name="interested_in" type="hidden" value="Compare ROI"/>
@@ -2499,6 +2499,11 @@ document.addEventListener("DOMContentLoaded", function() {
 </form>
     `;
     modalBody.innerHTML = newHtml;
+    
+    // Initialize phone inputs for the newly injected modal
+    if (typeof window.initPhoneInputs === 'function') {
+        window.initPhoneInputs();
+    }
 
     const roiForm = document.getElementById("compareRoiForm");
     if (roiForm) {
@@ -2514,4 +2519,54 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   }
+});
+
+// --- intl-tel-input integration ---
+window.initPhoneInputs = function() {
+    if (typeof window.intlTelInput !== 'function') return;
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    phoneInputs.forEach(input => {
+        if (!input.iti) {
+            input.iti = window.intlTelInput(input, {
+                initialCountry: "ae",
+                preferredCountries: ["ae", "in", "sa", "gb", "us", "pk", "kw", "qa"],
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                separateDialCode: true,
+                autoPlaceholder: "polite",
+                dropdownContainer: document.body,
+            });
+            
+            // Check if the input is meant for a dark background (white text)
+            const inlineStyle = input.getAttribute('style') || '';
+            const computedColor = window.getComputedStyle(input).color;
+            if (inlineStyle.includes('color:#fff') || inlineStyle.includes('color: #fff') || computedColor === 'rgb(255, 255, 255)') {
+                input.parentNode.classList.add('iti-dark');
+            }
+        }
+    });
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.initPhoneInputs();
+    
+    // Monkey-patch submitViaIframe globally to inject full phone number before submitting
+    if (typeof window.submitViaIframe === 'function' && !window._submitViaIframePatched) {
+        const originalSubmit = window.submitViaIframe;
+        window.submitViaIframe = function(formElement, successMsg) {
+            const phoneInputs = formElement.querySelectorAll('input[type="tel"]');
+            phoneInputs.forEach(input => {
+                if (input.iti && typeof input.iti.getNumber === 'function') {
+                    // Always try to use the full E164 number if possible
+                    try {
+                        const num = input.iti.getNumber();
+                        if (num) {
+                            input.value = num;
+                        }
+                    } catch(e) {}
+                }
+            });
+            return originalSubmit.call(window, formElement, successMsg);
+        };
+        window._submitViaIframePatched = true;
+    }
 });

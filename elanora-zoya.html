@@ -170,6 +170,17 @@
 </script>
 <!-- AOS Scroll Animations -->
 <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+<style>
+  .iti { width: 100%; display: block; }
+  .iti__selected-dial-code { color: #333 !important; }
+  .iti-dark .iti__selected-dial-code { color: #fff !important; }
+  .iti__country { color: #333 !important; }
+  .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags.png");}
+  @media (min-resolution: 2x) {
+    .iti__flag {background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags@2x.png");}
+  }
+</style>
 </head>
 <body class="property-page">
 <!-- Navigation -->
@@ -216,15 +227,15 @@
 <!-- Scroll Progress Bar -->
 <div id="scroll-progress"></div>
 <!-- Floating WhatsApp Button -->
-<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/971506884518" rel="noopener noreferrer" target="_blank">
+<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." rel="noopener noreferrer" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
 <!-- Mobile Sticky CTA Bar -->
 <div class="mobile-cta-bar">
-<a class="btn btn-outline-primary" href="tel:+971-506 884518">
+<a class="btn btn-outline-primary" href="tel:+971505559467">
 <i class="fas fa-phone me-1"></i> Call Now
       </a>
-<a class="btn" href="https://wa.me/971506884518" style="background:radial-gradient(circle at 50% 0%, #0d2247 0%, #051021 70%);color:#c9a55f;border:1px solid #c9a55f;" target="_blank">
+<a class="btn" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="background:radial-gradient(circle at 50% 0%, #0d2247 0%, #051021 70%);color:#c9a55f;border:1px solid #c9a55f;" target="_blank">
 <i class="fab fa-whatsapp me-1"></i> WhatsApp
       </a>
 </div>
@@ -250,7 +261,7 @@
 </div>
 <!-- Action Buttons -->
 <div class="col-lg-3 d-flex gap-2 justify-content-lg-end align-items-start mt-3 mt-lg-0">
-<a class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20%C3%89lanora%20by%20Zoya%20Fully%20Furnished%20Residences.%20Please%20share%20the%20price%20and%20brochure." style="background:rgba(255,255,255,0.08); border:1px solid rgba(201,165,95,0.6); color:#c9a55f; font-size:0.85rem; text-decoration:none; backdrop-filter: blur(8px); white-space: nowrap;" target="_blank">
+<a class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill shadow-sm" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="background:rgba(255,255,255,0.08); border:1px solid rgba(201,165,95,0.6); color:#c9a55f; font-size:0.85rem; text-decoration:none; backdrop-filter: blur(8px); white-space: nowrap;" target="_blank">
 <i class="fab fa-whatsapp" style="color:#25D366; font-size: 1.1rem;"></i> <span class="fw-semibold">Get Brochure &amp; Price</span>
 </a>
 <button class="btn btn-sm px-3 py-2 d-flex align-items-center gap-2 rounded-pill" id="shareBtn" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-size:0.85rem; backdrop-filter: blur(8px); white-space: nowrap;">
@@ -322,7 +333,7 @@
   <button class="btn price-action-btn" data-bs-toggle="modal" data-bs-target="#compareRoiModal" type="button">
     <i class="fas fa-exchange-alt me-1"></i> Compare ROI
   </button>
-  <a class="btn price-callback-btn" href="https://wa.me/971506884518?text=I+am+interested+in+%C3%89lanora+by+Zoya+Fully+Furnished+Residences." target="_blank">
+  <a class="btn price-callback-btn" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." target="_blank">
     <i class="fas fa-phone-alt me-1"></i> Get Callback
   </a>
 </div>
@@ -335,7 +346,7 @@
       <i class="fas fa-exchange-alt me-1"></i> Compare ROI
     </button>
   </div>
-  <a class="btn price-callback-btn justify-content-center w-100" href="https://wa.me/971506884518?text=I+am+interested+in+%C3%89lanora+by+Zoya+Fully+Furnished+Residences." target="_blank">
+  <a class="btn price-callback-btn justify-content-center w-100" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." target="_blank">
     <i class="fas fa-phone-alt me-1"></i> Get Callback
   </a>
 </div>
@@ -460,7 +471,7 @@
 </div>
 <form class="d-flex flex-column gap-3" id="propertyEnquiryForm">
 <input class="form-control form-control-sm" name="full_name" placeholder="Your Full Name" required="" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:#fff; border-radius:10px; padding:10px 14px;" type="text"/>
-<input class="form-control form-control-sm" name="phone" placeholder="Mobile Number" required="" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:#fff; border-radius:10px; padding:10px 14px;" type="tel"/>
+<input class="form-control form-control-sm" name="phone"  required="" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:#fff; border-radius:10px; padding:10px 14px;" type="tel"/>
 <input class="form-control form-control-sm" name="email" placeholder="Email Address" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:#fff; border-radius:10px; padding:10px 14px;" type="email"/>
 <select class="form-select form-select-sm" name="interested_in" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.7); border-radius:10px; padding:10px 14px;">
 <option value="">Interested In…</option>
@@ -472,11 +483,11 @@
                 </button>
 </form>
 <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
-<a class="d-flex align-items-center gap-2 text-decoration-none" href="tel:+971-506 884518" style="color:rgba(255,255,255,0.65); font-size:0.82rem;">
+<a class="d-flex align-items-center gap-2 text-decoration-none" href="tel:+971505559467" style="color:rgba(255,255,255,0.65); font-size:0.82rem;">
 <i class="fas fa-phone" style="color:#c9a55f;"></i> +91 9999 111 018
                 </a>
 <span style="color:rgba(255,255,255,0.25);">|</span>
-<a class="d-flex align-items-center gap-2 text-decoration-none" href="https://wa.me/971506884518" style="color:rgba(255,255,255,0.65); font-size:0.82rem;" target="_blank">
+<a class="d-flex align-items-center gap-2 text-decoration-none" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="color:rgba(255,255,255,0.65); font-size:0.82rem;" target="_blank">
 <i class="fab fa-whatsapp" style="color:#25D366;"></i> WhatsApp
                 </a>
 </div>
@@ -593,7 +604,7 @@
 <span class="badge bg-success rounded-pill px-3 py-1" style="font-size: 0.78rem;">Available</span>
 </td>
 <td class="py-4 px-4 text-center border-0">
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION%20Studio%20Apartments%20at%20%C3%89lanora%20by%20Zoya%20Fully%20Furnished%20Residences.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </td>
@@ -621,7 +632,7 @@
 <span class="badge bg-success rounded-pill px-3 py-1" style="font-size: 0.78rem;">Available</span>
 </td>
 <td class="py-4 px-4 text-center border-0">
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION%201%20Bedroom%20Apartments%20at%20%C3%89lanora%20by%20Zoya%20Fully%20Furnished%20Residences.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </td>
@@ -654,7 +665,7 @@
 </div>
 </div>
 </div>
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTIONStudio%20Apartments%20at%20%C3%89lanora%20by%20Zoya%20Fully%20Furnished%20Residences.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </div>
@@ -680,7 +691,7 @@
 </div>
 </div>
 </div>
-<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971506884518?text=Hi%2C%20I%20am%20interested%20in%20the%20PREMIUM%20COLLECTION1%20Bedroom%20Apartments%20at%20%C3%89lanora%20by%20Zoya%20Fully%20Furnished%20Residences.%20Please%20share%20the%20price%20and%20brochure." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
+<a class="btn btn-cta btn-sm px-4 py-2 rounded-pill fw-bold text-uppercase shadow-sm" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="font-size: 0.78rem; white-space: nowrap;" target="_blank">
               Get Price &amp; Brochure
             </a>
 </div>
@@ -867,7 +878,7 @@
 </div>
 <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 30px 0 20px 0;"/>
 <div class="text-center">
-<a class="btn w-100 py-2 rounded-pill fw-bold" href="https://wa.me/971506884518?text=I%27m%20interested%20in%20pricing%20and%20payment%20details%20for%20%C3%89lanora%20by%20Zoya%20%E2%80%93%20Dubai%20Industrial%20City" style="background: linear-gradient(135deg, #c9a55f, #e2c07a); color: #0b1c3c; border: none; font-size: 0.95rem;" target="_blank">
+<a class="btn w-100 py-2 rounded-pill fw-bold" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." style="background: linear-gradient(135deg, #c9a55f, #e2c07a); color: #0b1c3c; border: none; font-size: 0.95rem;" target="_blank">
 <i class="fab fa-whatsapp me-2"></i>Request Pricing Details
       </a>
 </div>
@@ -896,14 +907,14 @@
 <i class="fas fa-phone-alt me-3 fa-lg"></i>
 <div>
 <h6 class="mb-0">Call Us</h6>
-<p class="mb-0 text-white-50">+971-506 884518</p>
+<p class="mb-0 text-white-50"><a href="tel:+971506884518" class="text-white-50 text-decoration-none">+971-506 884518</a> / <a href="tel:+971505559467" class="text-white-50 text-decoration-none">+971 50 555 9467</a></p>
 </div>
 </div>
 <div class="d-flex align-items-center mb-3">
 <i class="fas fa-envelope me-3 fa-lg"></i>
 <div>
 <h6 class="mb-0">Email</h6>
-<p class="mb-0 text-white-50">info@aroraarealestate.ae</p>
+<p class="mb-0 text-white-50"><a href="mailto:info@aroraarealestate.ae" class="text-white-50 text-decoration-none">info@aroraarealestate.ae</a></p>
 </div>
 </div>
 <div class="d-flex align-items-center">
@@ -1006,10 +1017,11 @@
             Redefining luxury real estate investment through expertise, exclusivity, and exceptional service for
             discerning clients worldwide.
           </p>
+<p class="fw-bold text-white mb-4">License No: 1555233</p>
 <div class="social-links d-flex justify-content-center">
 <a aria-label="Facebook" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://www.facebook.com/share/1BMVpsfrGr/" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
 <a aria-label="LinkedIn" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://www.linkedin.com/in/aroraa-realestate-dubai?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>
-<a aria-label="WhatsApp" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://wa.me/971506884518" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-whatsapp text-white"></i></a>
+<a aria-label="WhatsApp" class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" href="https://wa.me/971505559467?text=Hello%2C%20I%20would%20like%20to%20request%20more%20information%20about%20your%20property%20listings." rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-whatsapp text-white"></i></a>
 <a aria-label="Instagram" class="bg-primary rounded-circle d-flex align-items-center justify-content-center" href="https://www.instagram.com/aroraarealestate.official?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-instagram text-white"></i></a>
 <a aria-label="YouTube" class="bg-primary rounded-circle d-flex align-items-center justify-content-center ms-3" href="https://youtube.com/@aroraa_realestatellc?si=1WuZGeUebwACyr7Y" rel="noopener noreferrer" style="width: 40px; height: 40px" target="_blank"><i class="fab fa-youtube text-white"></i></a>
 </div>
@@ -1044,13 +1056,13 @@
 <li class="mb-3">
 <div class="d-flex align-items-start justify-content-center">
 <i class="fas fa-envelope me-3 mt-1 text-white-50"></i>
-<span class="text-white-50">info@aroraarealestate.ae</span>
+<span class=\"text-white-50\"><a href=\"mailto:info@aroraarealestate.ae\" class=\"text-white-50 text-decoration-none\">info@aroraarealestate.ae</a></span>
 </div>
 </li>
 <li class="mb-3">
 <div class="d-flex align-items-start justify-content-center">
 <i class="fas fa-phone me-3 mt-1 text-white-50"></i>
-<span class="text-white-50">+971-506 884518</span>
+<span class="text-white-50"><a href="tel:+971506884518" class="text-white-50 text-decoration-none">+971-506 884518</a> / <a href="tel:+971505559467" class="text-white-50 text-decoration-none">+971 50 555 9467</a></span>
 </div>
 </li>
 <li class="mb-3">
@@ -1089,6 +1101,7 @@
 </footer>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script src="script.js"></script>
 <script>
 function submitViaIframe(formElement, successMsg) {
@@ -1261,7 +1274,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p class="text-muted mb-4 px-2">Get exclusive pre-launch prices &amp; a free property consultation. Our property expert will call you within 24hrs.</p>
 <form class="px-3 pb-3 text-start" id="exitForm">
 <input class="form-control mb-3 py-2" name="full_name" placeholder="Your Name" required="" type="text"/>
-<input class="form-control mb-3 py-2" name="phone" placeholder="Your Phone Number" required="" type="tel"/>
+<input class="form-control mb-3 py-2" name="phone"  required="" type="tel"/>
 <input name="interested_in" type="hidden" value="Exit Intent Lead"/>
 <input class="exit-source-project" name="source" type="hidden" value=""/>
 <button class="btn w-100 fw-bold py-2" style="background: #c9a55f; color: #0b1c3c;" type="submit"><i class="fas fa-phone-alt me-2"></i>Get My Free Consultation</button>
@@ -1350,8 +1363,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <input class="form-control py-2" name="full_name" placeholder="Enter your name" required="" type="text"/>
 </div>
 <div class="mb-4">
-<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">WhatsApp Number <span class="text-danger">*</span></label>
-<input class="form-control py-2" name="phone" placeholder="+971..." required="" type="tel"/>
+<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">Contact Number <span class="text-danger">*</span></label>
+<input class="form-control py-2" name="phone"  required="" type="tel"/>
 </div>
 <input name="interested_in" type="hidden" value="Price Insights"/>
 <input class="pi-source-project" name="source" type="hidden" value=""/>
@@ -1379,8 +1392,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <input class="form-control py-2" name="full_name" placeholder="Your Name" required="" type="text"/>
 </div>
 <div class="mb-4">
-<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">WhatsApp Number <span class="text-danger">*</span></label>
-<input class="form-control py-2" name="phone" placeholder="+971..." required="" type="tel"/>
+<label class="form-label fw-semibold" style="font-size:0.85rem; color:#333;">Contact Number <span class="text-danger">*</span></label>
+<input class="form-control py-2" name="phone"  required="" type="tel"/>
 </div>
 <input name="interested_in" type="hidden" value="Compare ROI"/>
 <input class="roi-source-project" name="source" type="hidden" value=""/>
