@@ -1,13 +1,13 @@
 User-agent: *
 Allow: /
 
-# Block build/script files
+# Block build/script files and utility scripts
 Disallow: /dist/
 Disallow: /build_scripts/
-Disallow: /*.js$
 Disallow: /*.py$
 
-# Allow all HTML and assets
+# Allow critical assets for rendering
+Allow: /script.js
 Allow: /*.html$
 Allow: /*.css$
 Allow: /images/
