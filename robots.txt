@@ -44,7 +44,7 @@ Allow: /
 Crawl-delay: 10
 
 # Sitemaps
-Sitemap: https://aroraarealestate.in/sitemap.xml
+Sitemap: https://aroraarealestatellc.ae/sitemap.xml
 
 # LLMs context file
-llms.txt: https://aroraarealestate.in/llms.txt
+llms.txt: https://aroraarealestatellc.ae/llms.txt

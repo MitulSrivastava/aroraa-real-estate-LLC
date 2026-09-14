@@ -2570,3 +2570,102 @@ document.addEventListener("DOMContentLoaded", function() {
         window._submitViaIframePatched = true;
     }
 });
+
+
+// ==========================================
+// UTM and Ad Tracking Logic
+// ==========================================
+(function() {
+    function getQueryParam(param) {
+        var urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param) || '';
+    }
+
+    function generateSessionId() {
+        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var firstSource = localStorage.getItem('first_source');
+        var currentSource = getQueryParam('utm_source');
+        var currentMedium = getQueryParam('utm_medium');
+        var currentCampaign = getQueryParam('utm_campaign');
+        var currentGclid = getQueryParam('gclid');
+        var now = new Date().toISOString();
+
+        // If this is the user's first time, store 'First' parameters
+        if (!firstSource && (currentSource || currentGclid || document.referrer)) {
+            localStorage.setItem('first_source', currentSource || (document.referrer ? 'referral' : 'direct'));
+            localStorage.setItem('first_medium', currentMedium || '');
+            localStorage.setItem('first_campaign', currentCampaign || '');
+            localStorage.setItem('first_gclid', currentGclid || '');
+            localStorage.setItem('entry_time', now);
+        }
+
+        // Always update 'Latest' parameters if they exist in the URL
+        if (currentSource || currentGclid) {
+            sessionStorage.setItem('latest_source', currentSource || '');
+            sessionStorage.setItem('latest_medium', currentMedium || '');
+            sessionStorage.setItem('latest_campaign', currentCampaign || '');
+            sessionStorage.setItem('latest_gclid', currentGclid || '');
+            sessionStorage.setItem('latest_keyword', getQueryParam('utm_term') || '');
+            sessionStorage.setItem('latest_content', getQueryParam('utm_content') || '');
+            sessionStorage.setItem('latest_timestamp', now);
+        }
+
+        if (!sessionStorage.getItem('session_id')) {
+            sessionStorage.setItem('session_id', generateSessionId());
+        }
+        
+        sessionStorage.setItem('latest_referrer', document.referrer || '');
+        sessionStorage.setItem('landing_page', window.location.href);
+
+        // Patch submitViaIframe to inject tracking data before creating FormData
+        if (typeof window.submitViaIframe === 'function') {
+            var originalSubmitIframe = window.submitViaIframe;
+            window.submitViaIframe = function(formElement, successMsg) {
+                // Enforce global form validation
+                if (!formElement.checkValidity()) {
+                    formElement.classList.add('was-validated');
+                    if (typeof formElement.reportValidity === 'function') {
+                        formElement.reportValidity();
+                    }
+                    return false; // Stop submission
+                }
+                var trackingData = {
+                    'session_id': sessionStorage.getItem('session_id') || '',
+                    'event_id': generateSessionId(), // unique event id per submission
+                    'first_source': localStorage.getItem('first_source') || 'direct',
+                    'first_medium': localStorage.getItem('first_medium') || '',
+                    'first_campaign': localStorage.getItem('first_campaign') || '',
+                    'first_gclid': localStorage.getItem('first_gclid') || '',
+                    'entry_time': localStorage.getItem('entry_time') || '',
+                    'latest_source': sessionStorage.getItem('latest_source') || '',
+                    'latest_medium': sessionStorage.getItem('latest_medium') || '',
+                    'latest_campaign': sessionStorage.getItem('latest_campaign') || '',
+                    'latest_gclid': sessionStorage.getItem('latest_gclid') || '',
+                    'latest_keyword': sessionStorage.getItem('latest_keyword') || '',
+                    'latest_content': sessionStorage.getItem('latest_content') || '',
+                    'latest_referrer': sessionStorage.getItem('latest_referrer') || '',
+                    'landing_page': sessionStorage.getItem('landing_page') || '',
+                    'page_title': document.title,
+                    'latest_timestamp': sessionStorage.getItem('latest_timestamp') || now
+                };
+
+                for (var key in trackingData) {
+                    var input = formElement.querySelector("input[name='" + key + "']");
+                    if (!input) {
+                        input = document.createElement("input");
+                        input.type = "hidden";
+                        input.name = key;
+                        formElement.appendChild(input);
+                    }
+                    input.value = trackingData[key];
+                }
+                
+                // Call the original submit function
+                return originalSubmitIframe.call(window, formElement, successMsg);
+            };
+        }
+    });
+})();

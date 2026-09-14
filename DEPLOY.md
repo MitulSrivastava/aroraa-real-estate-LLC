@@ -2,7 +2,7 @@
 
 The whole site is static files. The only thing that has ever gone wrong is
 **uploading to the wrong folder**: Hostinger's File Manager has two entry
-points, and only one is the live document root for `aroraarealestate.in`.
+points, and only one is the live document root for `aroraarealestatellc.ae`.
 
 There are two ways to deploy. Use **Option A** for a guaranteed correct
 deploy; use **Option B** for a quick manual one.
@@ -19,7 +19,7 @@ it by checking the live URL, so you can't silently deploy to the wrong place.
 brew install lftp            # the upload tool (macOS)
 cp .env.example .env         # then edit .env with your FTP details
 ```
-Get the FTP details from **hPanel → Websites → aroraarealestate.in →
+Get the FTP details from **hPanel → Websites → aroraarealestatellc.ae →
 Files → FTP Accounts** (create an FTP account for this website if needed).
 
 ### Every deploy
@@ -27,9 +27,9 @@ Files → FTP Accounts** (create an FTP account for this website if needed).
 ./deploy.sh
 ```
 What it does:
-1. Uploads a hidden test file and checks `https://aroraarealestate.in/...`
+1. Uploads a hidden test file and checks `https://aroraarealestatellc.ae/...`
    to confirm `REMOTE_DIR` really is the live root. If not, it **stops** and
-   tells you to fix `REMOTE_DIR` (usually `domains/aroraarealestate.in/public_html`).
+   tells you to fix `REMOTE_DIR` (usually `domains/aroraarealestatellc.ae/public_html`).
 2. Mirrors all new/changed files up.
 3. Spot-checks the three Dubai project images and prints `200` when live.
 
@@ -39,11 +39,11 @@ Just want to test the folder is right? `./deploy.sh --verify`
 
 ## Option B — Manual upload via File Manager
 
-1. **hPanel → File Manager → click "Access files of aroraarealestate.in"**
+1. **hPanel → File Manager → click "Access files of aroraarealestatellc.ae"**
    (NOT "Access all files of Premium Web Hosting" — that's the wrong root and
    is what broke the images before).
 2. Confirm you're in the right place: create `zztest.txt`, save, open
-   `https://aroraarealestate.in/zztest.txt`. It must show your text.
+   `https://aroraarealestatellc.ae/zztest.txt`. It must show your text.
 3. Upload `deploy-clean.zip` into that `public_html`, then **Extract** it
    (overwrite when asked).
 4. If the three project image folders already exist but are empty, **delete

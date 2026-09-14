@@ -83,7 +83,7 @@ EOF
     echo "    FAIL — $SITE_URL/$CHECK_FILE did NOT return the token." >&2
     echo "    => '$REMOTE_DIR' is NOT the live document root for this site." >&2
     echo "    Fix: in .env set REMOTE_DIR to the real root and re-run." >&2
-    echo "         Common value: domains/aroraarealestate.in/public_html" >&2
+    echo "         Common value: domains/aroraarealestatellc.ae/public_html (or whichever domain you're deploying)" >&2
     return 1
   fi
 }
