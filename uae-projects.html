@@ -323,7 +323,7 @@
         <option value="all">All Developers</option>
         <option value="anax-developments">ANAX Developments</option>
         <option value="azizi-developments">Azizi Developments</option>
-        <option value="binghatti-mercedes-benz">Binghatti</option>
+        <option value="binghatti">Binghatti</option>
         <option value="bnw-developments">BNW Developments</option>
         <option value="damac-properties">DAMAC Properties</option>
         <option value="danube-properties">Danube Properties</option>
@@ -344,6 +344,33 @@
   </div>
 </div>
 <div class="row g-4" id="properties-grid">
+
+<!-- Binghatti Spectre Card -->
+<div class="col-lg-3 col-md-6 mb-4 developer-card" data-developer="binghatti">
+<div class="property-card bg-white rounded-4 overflow-hidden shadow-sm h-100">
+<div class="position-relative">
+<img alt="Binghatti Spectre" class="img-fluid w-100 property-img" loading="lazy" src="images/Binghatti Spectre/binghatti-spectre-exterior-twin-towers.webp" style="height: 200px; object-fit: cover;"/>
+<div class="position-absolute top-0 start-0 m-3">
+<span class="badge bg-primary px-3 py-2 rounded-pill shadow-sm">New Launch</span>
+</div>
+</div>
+<div class="p-4">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<span class="text-primary fw-bold fs-5">AED 774,999* Onwards</span>
+<span class="text-muted small"><i class="fas fa-map-marker-alt me-1"></i>Al Jaddaf</span>
+</div>
+<h3 class="h5 fw-bold mb-3 text-dark">Binghatti Spectre</h3>
+<div class="d-flex gap-3 mb-4 text-muted small">
+<span><i class="fas fa-star me-2"></i>Apartments &amp; Offices</span>
+<span><i class="fas fa-building me-2"></i>Binghatti</span>
+</div>
+<a class="btn btn-outline-primary w-100 rounded-pill" href="binghatti-spectre">
+                  View Details <i class="fas fa-arrow-right ms-2"></i>
+</a>
+</div>
+</div>
+</div>
+
 <!-- The Archive by Imtiaz Card -->
 <div class="col-lg-3 col-md-6 mb-4 developer-card" data-developer="imtiaz-developments">
 <div class="property-card bg-white rounded-4 overflow-hidden shadow-sm h-100">
@@ -720,7 +747,7 @@
 </div>
 </div>
 <!-- Azizi Venice Card -->
-<div class="col-lg-3 col-md-6 mb-4 developer-card" data-aos="fade-up" data-developer="binghatti-mercedes-benz">
+<div class="col-lg-3 col-md-6 mb-4 developer-card" data-aos="fade-up" data-developer="binghatti">
 <div class="property-card bg-white rounded-4 overflow-hidden shadow-sm h-100">
 <div class="position-relative">
 <img alt="Mercedes-Benz Places" class="img-fluid w-100 property-img" loading="lazy" src="images/Mercedes Benz Places/ropc6hzgccz0iyaeyeq9.webp" style="height: 200px; object-fit: cover;"/>
@@ -1645,7 +1672,7 @@ function submitViaIframe(formElement, successMsg) {
   formData.append('source_url', window.location.href);
 
   // ✅ PASTE YOUR DEPLOYED WEB APP URL BELOW
-  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxhWgcLbT4wsvr1__yaHQfxAcBB50Hias60joxmBJBvtRaF0ykY005aY0MAbkDAqr6D/exec';
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxCU4Rioyc6_Bv_ckFdc1aMgeLEDUnfY0GOIxFNZg_EgKTcBDC0XY7XXSy-P_1vyCnm/exec';
 
   var params = [];
   formData.forEach(function(value, key) {
